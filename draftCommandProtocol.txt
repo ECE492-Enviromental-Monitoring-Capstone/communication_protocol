@@ -1,3 +1,25 @@
 Command:
 
-1. StartRec
+Part 1: connection
+1. connectBlueDevice(): setup the communication session between Windows PC and raspberry pi
+2. ifConnected(): return the status of connection
+
+Part 2: data recording
+1. ultrasonicRecOn(): start logging ultrasonic data onto sd card, return time started
+2. ultrasonicRecOff(): stop logging ultrasonic data, return time ended - time started
+3. ifUltrasonicRecon(0): return the status of recording, return current time - time started
+4. tempRecOn(): start logging temperature data onto sd card, return time started
+5. tempRecOff(): stop logging temperature data onto sd card, return time ended - time started
+6. humiRecOn(): start logging humidity data onto sd card, return current time - time started
+7. humiRecOff(): stop logging humidity data onto sd card, return current time - time started
+8. lumiRecOn(): start logging luminosity data onto sd card, return time started
+9. lumiRecOff(): stop logging luminosity data, return current time - time started
+10. ifTempRecOn(): return temperature recording status and current time - start time
+11. ifHumiRecOn(): return humidity recording status and current time - start time
+12. ifLumiRecOn(): return luminosity recording status and current time - start time
+
+Part 3: get info
+1. fetchTemp(): return temperature reading at the moment
+2. fetchHumi(): return humidity reading at the moment
+3. fetchLumi(): return luminosity reading at the moment
+
